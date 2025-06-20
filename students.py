@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Load the dataset
-file_path = '/student_scores_dirty.csv'  # Update with the actual file path
+file_path = './student_scores_dirty.csv'
 student_scores_df = pd.read_csv(file_path)
 
 # Display the first few rows of the dataset before cleaning
@@ -48,5 +48,5 @@ if __name__ == "__main__":
     display_cleaning_summary(student_scores_df, cleaned_student_scores_df)
 
     # Save cleaned data to a new CSV
-    cleaned_student_scores_df.to_csv('student_scores_cleaned.csv', index=False)
+    #cleaned_student_scores_df.to_csv('student_scores_cleaned.csv', index=False)
     print("\nCleaned data has been saved to 'student_scores_cleaned.csv'.")
