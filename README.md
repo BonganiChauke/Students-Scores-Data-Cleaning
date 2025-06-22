@@ -35,4 +35,40 @@ pip install pandas
 ```bash
 python student_scores_cleaning.py
 ```
+## Expected Output
 
+When you run the script successfully, you should see output similar to this in your terminal:
+
+```text
+Initial Dataset Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 100 entries, 0 to 99
+Data columns (total 5 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   Math            95 non-null     float64
+ 1   Science         97 non-null     float64
+ 2   English         96 non-null     float64
+ 3   Grade           98 non-null     object 
+ 4   EnrollmentDate  100 non-null    object 
+dtypes: float64(3), object(2)
+memory usage: 4.0+ KB
+None
+
+   Math  Science  English Grade EnrollmentDate
+0  85.0     92.0     88.0    A     2022-09-01
+1  78.0     85.0      NaN    B     invalid_date
+2   NaN     76.0     82.0    C     2022-09-01
+
+Cleaning Summary:
+Before Cleaning: 100 rows
+After Cleaning: 89 rows
+
+Sample of Cleaned Data:
+   Math  Science  English Grade EnrollmentDate
+0  85.0     92.0     88.0    A     2022-09-01
+3  92.0     88.0     95.0    A     2022-09-01
+4  76.0     81.0     79.0    B     2022-09-01
+
+Cleaned data has been saved to 'student_scores_cleaned.csv'.
+```
